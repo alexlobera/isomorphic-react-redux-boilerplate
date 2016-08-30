@@ -1,4 +1,4 @@
-# isomorphic-react-boilerplate
+# isomorphic React Redux boilerplate
 
 ## This branch contains the solutions 1 and 2 of the exercise
 
