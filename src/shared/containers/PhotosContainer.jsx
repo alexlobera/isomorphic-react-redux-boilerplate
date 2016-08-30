@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Photos from '../components/Photos';
 import * as actions from '../actions/photos';
 
+// https://github.com/alexlbr/redix
 class PhotosContainer extends Container {
   constructor(props) {
     super(props);

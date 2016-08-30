@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "node_modules/.bin/nodemon -- node_modules/.bin/babel-node server/app.dev.js",
-    "build": "NODE_ENV=production webpack --progress --color -p --config webpack.prod.config.js"
+    "dev": "node_modules/.bin/nodemon -- node_modules/.bin/babel-node ./src/server/app.dev.js",
+    "build:client": "node_modules/.bin/rimraf ./dist/client && cross-env NODE_ENV=production node_modules/.bin/babel-node -- node_modules/.bin/webpack -p --config webpack.prod.config.js",
+    "build:server": "node_modules/.bin/rimraf ./dist/server && node_modules/.bin/babel src/server/app.prod.js --source-maps --out-dir dist",
+    "build": "npm run build:server && npm run build:client"
   },
   "author": "Alex Lobera",
   "license": "ISC",

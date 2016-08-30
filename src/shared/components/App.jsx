@@ -7,11 +7,7 @@ export default class App extends React.Component {
       <div>
         <h1>Isomorphic Hello</h1>
         <Link to="/test">
-          Click me to test the routing and hot reloading
-        </Link>
-        <br/>
-        <Link to="/photos">
-          photos
+          Click me to test the routing (client-side if JavaScript is enabled)
         </Link>
       </div>
     );
