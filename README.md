@@ -12,5 +12,5 @@ This repository is a simple and up-to-date boilerplate to create isomorphic Reac
 
 - `git clone git@github.com:alexlbr/isomorphic-react-redux-boilerplate.git`
 - `cd isomorphic-react-redux-boilerplate`
-- `npm run dev` for development
-- `npm run build` for production
+- `npm run dev` (for development)
+- `npm run build` (for production)
