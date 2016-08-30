@@ -1,5 +1,7 @@
 # isomorphic-react-boilerplate
 
+## This branch container the solutions 1 and 2 for the exercise
+
 ## Exercises:
 
 1. The server side needs a store. Where would you add a <Provider store={store}> ? Hint, it should somewhere be in the src/server folder.   
