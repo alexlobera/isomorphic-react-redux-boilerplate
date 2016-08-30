@@ -2,7 +2,7 @@
 
 ## This branch contains the solutions 1 and 2 of the exercise
 
-## Exercises:
+## Exercise:
 
 1. The server side needs a store. Where would you add a <Provider store={store}> ? Hint, it should be somewhere in the src/server folder.   
 
