@@ -13,11 +13,8 @@ const reactApp = (req, res) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
       const initialState = res.storeInitiaState;
-      const store = configureStore(initialState);
       const InitialComponent = (
-        <Provider store={store}>
-          <RouterContext {...renderProps} />
-        </Provider>
+        <RouterContext {...renderProps} />
       );
       const componentHTML = renderToString(InitialComponent);
       const HTML = `
