@@ -1,6 +1,6 @@
 # isomorphic-react-boilerplate
 
-## This branch container the solutions 1 and 2 for the exercise
+## This branch contains the solutions 1 and 2 of the exercise
 
 ## Exercises:
 
