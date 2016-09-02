@@ -12,8 +12,8 @@ const reactApp = (req, res) => {
     } else if (redirectLocation) {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
-      const initialState = res.storeInitiaState;
-      const store = configureStore(initialState);
+      const store = configureStore(res.storeInitiaState);
+      const finalState = store.getState();
       const InitialComponent = (
         <Provider store={store}>
           <RouterContext {...renderProps} />
@@ -27,7 +27,7 @@ const reactApp = (req, res) => {
               <meta charset="utf-8">
               <title>Isomorphic Redux workshop | javaScript Lab London</title>
               <script>
-                window.__store_initial_state__ = ${JSON.stringify(initialState)};
+                window.__store_initial_state__ = ${JSON.stringify(finalState)};
               </script>
             </head>
             <body>
