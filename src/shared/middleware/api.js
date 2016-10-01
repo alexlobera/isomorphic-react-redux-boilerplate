@@ -67,13 +67,16 @@ export default store => next => action => {
   next(actionWith({ type: requestType, endpoint }));
 
   return callApi(endpoint, schema).then(
-    response => next(actionWith({
+    response => {
+      return next(actionWith({
       response,
       type: successType
-    })),
-    error => next(actionWith({
+    }))},
+    error => {
+      return next(actionWith({
       type: failureType,
       error: error.message || 'Something bad happened'
     }))
+  }
   )
 };

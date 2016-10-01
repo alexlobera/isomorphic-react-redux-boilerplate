@@ -3,12 +3,13 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import promise from 'redux-promise';
 import reducers from '../reducers';
+import apiMiddleware from '../middleware/api';
 
 const configureStore = (initialState) => {
   const store = createStore(
     reducers,
     initialState,
-    applyMiddleware(promise, thunk, createLogger())
+    applyMiddleware(promise, thunk, apiMiddleware, createLogger())
   );
 
   if (module.hot) {

@@ -9,12 +9,12 @@ import * as actions from '../actions/photos';
 class PhotosContainer extends Container {
   constructor(props) {
     super(props);
-    this.setComponent(Photos, { 
+    this.setComponent(Photos, {
       mapPropFuncsToThis: props
     });
     this.bindThis('fetchPhotos');
   }
-  
+
   componentDidMount() {
     if (!this.props.photos) {
       this.fetchPhotos();
@@ -23,7 +23,7 @@ class PhotosContainer extends Container {
 }
 
 const mapStateToProps = (state) => ({
-  photos: state.photos
+  photos: state.entities.photos
 })
 
 export default connect(
